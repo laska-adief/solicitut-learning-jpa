@@ -21,6 +21,9 @@ public class Book {
   )
   private Set<Author> authors = new HashSet<>();
 
+  @ManyToOne
+  private Publisher publisher;
+
   public Set<Author> getAuthors() {
     return authors;
   }
@@ -51,6 +54,14 @@ public class Book {
 
   public void setIsbn(String isbn) {
     this.isbn = isbn;
+  }
+
+  public Publisher getPublishers() {
+    return publisher;
+  }
+
+  public void setPublishers(Publisher publishers) {
+    this.publisher = publishers;
   }
 
   @Override
